@@ -1,0 +1,62 @@
+// Function: main
+
+
+int __cdecl main(int _Argc,char **_Argv,char **_Env)
+
+{
+  uint uVar1;
+  uint uVar2;
+  
+  __main();
+  uVar1 = calculateArea(10,5);
+  uVar2 = calculatePerimeter(10,5);
+  displayResults(uVar1,uVar2);
+  return 0;
+}
+
+
+
+// Function: calculateArea
+
+int calculateArea(int param_1,int param_2)
+
+{
+  return param_1 * param_2;
+}
+
+
+
+// Function: displayResults
+
+void displayResults(uint param_1,uint param_2)
+
+{
+  printf("Area: %d\n",(ulonglong)param_1);
+  printf("Perimeter: %d\n",(ulonglong)param_2);
+  return;
+}
+
+
+
+// Function: __main
+
+void __main(void)
+
+{
+  if (initialized == 0) {
+    initialized = 1;
+    __do_global_ctors();
+  }
+  return;
+}
+
+
+
+// Function: calculatePerimeter
+
+int calculatePerimeter(int param_1,int param_2)
+
+{
+  return (param_2 + param_1) * 2;
+}
+
